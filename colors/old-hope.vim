@@ -23,7 +23,7 @@ let s:tCol = oldhope#GetTCo()
 " Colors {{{
 " * GUI
 let s:gWhite           = "#FFFFFF"
-let s:gBlack           = "#000000"
+let s:gBlack           = "#181818"
 
 let s:gVeryLightGrey   = "#CBCDD2"
 let s:gLightGrey       = "#848794"
@@ -133,15 +133,15 @@ call oldhope#LinkHi("Conditional"   , "Statement")
 call oldhope#LinkHi("Keyword"       , "Statement")
 call oldhope#LinkHi("Repeat"        , "Statement")
 call oldhope#LinkHi("Label"         , "Statement")
-call oldhope#LinkHi("Operator"      , "Statement")
+call oldhope#SetHi("Operator"      , s:vVeryLightGrey        , s:vBg           , s:vNone      )
 " * PreProcessor macros
-call oldhope#SetHi ("Define"        , s:vGreen        , s:vBg           , s:vNone      )
+call oldhope#SetHi ("Define"        , s:vVeryLightGrey        , s:vBg           , s:vNone      )
 call oldhope#LinkHi("Include"       , "Define")
 call oldhope#LinkHi("Macro"         , "Define")
 call oldhope#LinkHi("PreCondit"     , "Define")
 call oldhope#LinkHi("PreProc"       , "Define")
 " * Functions
-call oldhope#SetHi ("Identifier"    , s:vYellow       , s:vBg           , s:vNone      )
+call oldhope#SetHi ("Identifier"    , s:vVeryLightGrey       , s:vBg           , s:vNone      )
 call oldhope#LinkHi("Function"      , "Identifier")
 " * Types
 call oldhope#SetHi ("Type"          , s:vRed          , s:vBg           , s:vNone      )
@@ -149,11 +149,11 @@ call oldhope#LinkHi("Typedef"       , "Type")
 call oldhope#LinkHi("Structure"     , "Type")
 call oldhope#LinkHi("StorageClass"  , "Type")
 " * Specials
-call oldhope#SetHi ("Special"       , s:vBlue         , s:vBg           , s:vNone      )
+call oldhope#SetHi ("Special"       , s:vVeryLightGrey         , s:vBg           , s:vNone      )
 call oldhope#LinkHi("SpecialChar"   , "Special")
 call oldhope#LinkHi("Tag"           , "Special")
 call oldhope#LinkHi("Delimiter"     , "Special")
-call oldhope#LinkHi("SpecialComment", "Special")
+call oldhope#SetHi("SpecialComment" , s:vGrey                  , s:vBg           , s:vNone      )
 call oldhope#LinkHi("SpecialKey"    , "Special")
 call oldhope#LinkHi("Debug"         , "Special")
 " * Cursor
@@ -181,7 +181,7 @@ call oldhope#SetHi ("MatchParen"    , s:vVeryDarkGrey , s:vYellow       , s:vBol
 call oldhope#SetHi ("ModeMsg"       , s:vOrange       , s:vBg           , s:vNone      )
 call oldhope#SetHi ("Question"      , s:vOrange       , s:vBg           , s:vNone      )
 " * Complete menu
-call oldhope#SetHi ("Pmenu"         , s:vWhite        , s:vDarkGrey     , s:vNone      )
+call oldhope#SetHi ("Pmenu"         , s:vWhite        , s:vBlack        , s:vNone      )
 call oldhope#SetHi ("PmenuSel"      , s:vVeryDarkGrey , s:vGreen        , s:vBold      )
 call oldhope#SetHi ("PmenuSbar"     , s:vVeryDarkGrey , s:vVeryDarkGrey , s:vNone      )
 call oldhope#SetHi ("PmenuSbar"     , s:vGreen        , s:vVeryDarkGrey , s:vNone      )
