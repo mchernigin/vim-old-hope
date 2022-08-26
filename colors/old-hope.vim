@@ -177,7 +177,7 @@ call oldhope#LinkHi("FoldColumn"    , "Folded")
 call oldhope#SetHi ("IncSearch"     , s:vVeryDarkGrey , s:vVeryLightGrey, s:vNone      )
 call oldhope#SetHi ("Search"        , s:vVeryDarkGrey , s:vOrange       , s:vNone      )
 " * Other
-call oldhope#SetHi ("MatchParen"    , s:vVeryDarkGrey , s:vYellow       , s:vBold      )
+call oldhope#SetHi ("MatchParen"    , s:vWhite        , s:vDarkGrey     , s:vBold      )
 call oldhope#SetHi ("ModeMsg"       , s:vOrange       , s:vBg           , s:vNone      )
 call oldhope#SetHi ("Question"      , s:vOrange       , s:vBg           , s:vNone      )
 " * Complete menu
